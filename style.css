@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    font-family: "Inter";
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/*Animations*/
+@keyframes pulse {
+    0% {
+        scale: 1;
+        box-shadow: 0 0 0 0 rgba(255, 45, 149, 0.7);
+    }
+    25% {
+        scale: 1.05;
+        box-shadow: 0 0 0 12px rgba(255, 45, 149, 0);
+    }
+    50% {
+        scale: 1.10;
+        box-shadow: 0 0 0 24px rgba(255, 45, 149, 0);
+    }
+    75% {
+        scale: 1.05;
+        box-shadow: 0 0 0 12px rgba(255, 45, 149, 0);
+    }
+    100% {
+        scale: 1;
+        box-shadow: 0 0 0 0 rgba(255, 45, 149, 0);
+    }
+}
+
+@keyframes wave {
+    0% {
+        box-shadow: 0 0 0 0 rgba(215, 208, 16, 1);
+    }
+    50% {
+        box-shadow: 0 0 0 48px rgba(237, 9, 123, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(219, 198, 9, 0.7);
+    }
+}
+
+.head{
+    display: flex;
+    align-items: center;
+    padding: 0px 200px;
+    justify-content: space-between;
+    background-color: #1A0B2E;
+    width: auto;
+    height: 92px;
+}
+
+.tabs{
+    display: flex;
+    gap: 32px;
+    font-size: 16px;
+    color: white;
+
+}
+
+.tabs h4{
+    font-weight: 300;
+}
+
+.tabs h4:hover{
+    background-color: #00FF88;
+    border: none;
+    border-radius: 40px;
+    padding: 4px;
+    color: #1A0B2E;
+}
+.head h1{
+    color: white;
+}
+.head h1 span{
+    background-image: linear-gradient(90deg, #F7E93F, #FB09B4, #9100F8);
+    background-clip: text;
+    color: transparent;
+}
+.Sub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 135px;
+    height: auto;
+    padding: 16px 12px;
+    border: none;
+    border-radius: 40px;
+    background-image: linear-gradient(90deg, #F7E93F, #FB09B4, #9100F8);
+}
+
+.Sub:hover{
+    background-image: none;
+    background-color: #00FF88;
+    color: #1A0B2E;
+}
+
+.Sub h2{
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+.head img{
+    display: none;
+}
+/*=====Responsive Header*/
+@media screen and (max-width: 576px) {
+    .head{
+        padding: 0px 20px;
+        width: auto;
+    }
+    .tabs, .Sub{
+        display: none;
+    }
+    .head img{
+        display: flex;
+    }
+}
+
+/*==========Home Icon=======*/
+.hero-bg{
+    background-image: url(./assets/hero-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    min-height: 760px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    flex-direction: column;
+    position: relative;
+}
+
+.icon {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: wave 2s ease-in-out infinite;
+}
+
+.icon img:first-child {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.icon img:nth-child(2) {
+    position: absolute;
+    width: 100px;
+    z-index: 2;
+}
+
+.icon img:nth-child(2):hover{
+    scale: 1.8;
+    transition: 1s ease-in-out;
+}
+#new {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    width: 75px;
+    text-align: center;
+    background: #00FF88;
+    color: #1A0B2E;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    z-index: 3;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+
+.t-wave {
+    max-width: 420px;
+    color: white;
+}
+
+.t-wave h2 {
+    font-size: 48px;
+    margin: 0 0 16px 0;
+}
+
+.t-wave p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* BUTTONS FLEX */
+.buttons {
+    display: flex;
+    gap: 16px;
+}
+
+/* BUTTON STYLE */
+.buttons button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* ICON INSIDE BUTTON */
+.buttons button img {
+    width: 20px;
+}
+
+
+
+
