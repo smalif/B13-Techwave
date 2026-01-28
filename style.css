@@ -8,6 +8,7 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    background-color: #1A0B2E;
 }
 
 /*Animations*/
@@ -149,6 +150,7 @@ body{
 
 .icon {
     position: relative;
+    top: 20px;
     width: 350px;
     height: 350px;
     display: flex;
@@ -192,47 +194,243 @@ body{
 
 
 .t-wave {
-    max-width: 420px;
+    max-width: 400px;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .t-wave h2 {
-    font-size: 48px;
-    margin: 0 0 16px 0;
+    font-size: 60px;
+    margin-top: 10px;
 }
 
 .t-wave p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 30px;
+    font-size: 16px;
+    margin-top: 8px;
+    width: 550px;
+    font-weight: 200;
 }
-
-/* BUTTONS FLEX */
-.buttons {
+.buttons{
     display: flex;
-    gap: 16px;
+    gap: 8px;
+    margin: 24px;
 }
-
-/* BUTTON STYLE */
-.buttons button {
+#btn-1 {
     display: flex;
     align-items: center;
-    gap: 10px;
-
+    width: 210px;
+    height: 44px;
+    gap: 8px;
     padding: 12px 20px;
     border-radius: 30px;
     border: none;
     cursor: pointer;
-
-    font-size: 14px;
-    font-weight: 600;
+    background-image: linear-gradient(90deg, #F7E93F, #FB09B4, #9100F8);
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    transition: all 0.3s ease;
 }
 
-/* ICON INSIDE BUTTON */
+#btn-1:hover {
+    background-color: #1ed760;
+    transform: scale(1.05);
+}
+
+#btn-2 {
+    display: flex;
+    align-items: center;
+    width: 147px;
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid #1ed760;
+    cursor: pointer;
+    background-color: transparent;
+    color: #1ed760;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+#btn-2:hover {
+    background-image: linear-gradient(90deg, #F7E93F, #FB09B4, #9100F8);
+    border: none;
+    scale: 1.1;
+    transition: all 0.3s ease;
+}
+
 .buttons button img {
     width: 20px;
 }
 
 
 
+.hide{
+    display: none;
+}
 
+
+/*===========About===========*/
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.text h2{
+    font-size: 48px;
+}
+
+.text p{
+    font-size: 16px;
+    padding-top: 16px;
+    font-weight: 200;
+    line-height: 2;
+}
+.numbers{
+    display: flex;
+    gap: 80px;
+    padding: 80px 200px;
+}
+
+.element{
+    text-align: center;
+}
+
+.element h1{
+    color: #00FF88;
+    font-size: 48px;
+}
+
+.element p{
+    color: #FFFFFF;
+    font-size: 16px;
+    padding-top: 16px;
+    font-weight: 200;
+    padding-bottom: 120px;
+}
+
+/*===================*/
+.why{
+    padding: 120px 200px;
+    background-color: #230E3D;
+}
+
+.why h1{
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+    padding-bottom: 40px;
+    color: #FFFFFF;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+}
+.container h3{
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.container p{
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 200;
+    line-height: 24px;
+}
+
+
+.p-audio{
+    background-color: #351165;
+    border: none;
+    border-radius: 40px;
+    width: 380px;
+    height: 480px;
+    padding: 40px;
+
+    grid-row: span 2;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;   /* optional, depends on your layout */
+    justify-content: center;  /* vertical center */
+    align-items: flex-start;
+}
+
+.mobile{
+    grid-column: span 2;
+    background-color: #351165;
+    border: none;
+    border-radius: 40px;
+    padding: 40px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.last{
+    background-color: #351165;
+    border: none;
+    border-radius: 40px;
+    padding: 40px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.feature{
+    padding: 120px 200px;
+}
+.feature h1{
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+    padding-bottom: 40px;
+    color: #FFFFFF;
+}
+.video{
+    background-color: #250D44;
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 24px;
+}
+
+.video-text{
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 12px;
+}
+
+.video-text h5{
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    color: #00FF88;
+    gap: 6px;
+}
+.ytVideo{
+    width: 380px;
+    height: 214px;
+    border: none;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+}
