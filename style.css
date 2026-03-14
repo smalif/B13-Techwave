@@ -115,7 +115,7 @@ body{
 @media screen and (max-width: 576px) {
     .head{
         padding: 0px 20px;
-        width: auto;
+        width: auto; 
     }
     .tabs, .Sub{
         display: none;
@@ -132,7 +132,7 @@ body{
     background-size: cover;
     background-position: center;
     width: 100%;
-    min-height: 760px;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -192,7 +192,22 @@ body{
     animation: pulse 1.5s ease-in-out infinite;
 }
 
+@media screen and (max-width: 576px) {
+    .icon{
+        top: 70px;
+        width: 200px;
+        height: 200px;
+    }
+    .hero-bg{
+        min-height: 10vh;  /* smaller height for mobile */
+        background-position: center top;
+    }
 
+    #new{
+        right: -20px;
+        top: 0px;
+    }
+}
 .t-wave {
     max-width: 400px;
     color: white;
@@ -267,7 +282,18 @@ body{
     width: 20px;
 }
 
-
+@media screen and (max-width: 576px){
+    .t-wave{
+        padding-top: 20px;
+    }
+    .t-wave h2{
+        font-size: 40px;
+    }
+    .t-wave p{
+        width: auto;
+        text-align: center;
+    }
+}
 
 .hide{
     display: none;
